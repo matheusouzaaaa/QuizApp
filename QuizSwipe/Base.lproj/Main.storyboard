@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,77 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuizSwipe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pergunta no valor de 1 milhão de reais" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sm8-1V-pBQ">
+                                <rect key="frame" x="16" y="234" width="348" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="348" id="4Qg-4r-Wx6"/>
+                                    <constraint firstAttribute="height" constant="27" id="WBY-W1-GXE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lJ2-uz-QqU">
+                                <rect key="frame" x="16" y="114" width="348" height="103"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="ZcO-cJ-n28"/>
+                                    <constraint firstAttribute="width" constant="348" id="tKL-qx-51G"/>
+                                </constraints>
+                                <string key="text">Responda as perguntas abaixo movendo a tela para cima (verdadeiro) ou para baixo (falso).  As perguntas podem ser alternadas movendo a tela para a esquerda ou direita.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pergunta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfM-NW-5jo">
+                                <rect key="frame" x="16" y="317" width="343" height="188"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="188" id="Ylb-qV-1tG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuizSwipe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebb-FW-8cA">
+                                <rect key="frame" x="107" y="62" width="161" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="V7H-Qz-Ddr"/>
+                                    <constraint firstAttribute="width" constant="161" id="i1i-gy-bw4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lJ2-uz-QqU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="19m-Rd-I6X"/>
+                            <constraint firstItem="lJ2-uz-QqU" firstAttribute="top" secondItem="ebb-FW-8cA" secondAttribute="bottom" constant="15" id="6xH-ub-mlx"/>
+                            <constraint firstItem="ebb-FW-8cA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="AU5-g6-wQn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ebb-FW-8cA" secondAttribute="trailing" constant="107" id="MXr-b5-x9I"/>
+                            <constraint firstItem="ebb-FW-8cA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="XoF-Ey-mLf"/>
+                            <constraint firstItem="QfM-NW-5jo" firstAttribute="top" secondItem="sm8-1V-pBQ" secondAttribute="bottom" constant="56" id="bGZ-e9-b8Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sm8-1V-pBQ" secondAttribute="trailing" constant="11" id="bK0-4O-JXh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QfM-NW-5jo" secondAttribute="trailing" constant="16" id="dWy-7u-y5Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lJ2-uz-QqU" secondAttribute="trailing" constant="11" id="eFo-w5-8I0"/>
+                            <constraint firstItem="QfM-NW-5jo" firstAttribute="top" secondItem="sm8-1V-pBQ" secondAttribute="bottom" constant="56" id="mhs-Zb-NFF"/>
+                            <constraint firstItem="sm8-1V-pBQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uWJ-wl-Ust"/>
+                            <constraint firstItem="sm8-1V-pBQ" firstAttribute="top" secondItem="lJ2-uz-QqU" secondAttribute="bottom" constant="17" id="vdf-Jy-6ei"/>
+                            <constraint firstItem="QfM-NW-5jo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="zo0-eO-RZf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="txtPergunta" destination="QfM-NW-5jo" id="GbX-qD-TDz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="92" y="33.733133433283363"/>
         </scene>
     </scenes>
 </document>
